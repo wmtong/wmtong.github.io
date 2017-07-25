@@ -1,8 +1,7 @@
 #header-section {
   .header-wrapper {
-    // background: linear-gradient(45deg, $blueRGBA , $purpleRGBA );
     padding: 0;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     .header-body {
       width: 100%;
       height: 101vh;
@@ -34,8 +33,8 @@
         .subtext,
         .btn {
           opacity: 0;
-          animation-duration: 0.8s;
-          animation-delay: 0.3s;
+          animation-duration: 1s;
+          animation-delay: 0.2s;
           animation-fill-mode: forwards;
           .no-cssanimations & {
             opacity: 1;
@@ -104,7 +103,7 @@
               line-height: 1.5;
               color: $white;
               text-transform: uppercase;
-              font-family: $Gotham, $sans-serif-stack;
+              font-family: $Nunito, $sans-serif-stack;
               opacity: 1;
               margin: 0;
               @include MQ(SM) {
@@ -122,49 +121,11 @@
         margin: 0 auto;
         text-align: center;
         color: $white;
-        .scroll-down {
+        .chevron {
+          transform: rotate(90deg);
+          height: 20px;
           display: block;
-          width: 70px;
-          margin: 0 auto;
-          transition: all 0.3s ease;
-          &:hover, &:focus {
-            transition: all 0.3s ease;
-            .logo {
-              opacity: 0;
-            }
-            .scroll-down-text {
-              opacity: 1;
-              visibility: visible;
-            }
-          }
-          .logo {
-            width: 35px;
-            transition: opacity 0.5s ease, visibility 0.5s;
-          }
-          .scroll-down-text {
-            color: $white;
-            font-family: $Gotham, $sans-serif-stack;
-            text-transform: uppercase;
-            font-size: 12px;
-            font-weight: 700;
-            text-align: center;
-            height: 100%;
-            opacity: 0;
-            padding-top: 0.5em;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            transition: opacity 0.5s ease, visibility 0.5s;
-            visibility: hidden;
-            width: 100%;
-            .chevron {
-              transform: rotate(90deg);
-              height: 20px;
-              display: block;
-              margin: 10px auto;
-            }
-          }
+          margin: 10px auto;
         }
       }
     }

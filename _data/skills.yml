@@ -1,18 +1,23 @@
-development:
+languages:
   - item: Swift
   - item: JavaScript (ES6)
   - item: Python
-  - item: Ruby on Rails
-  - item: React
-  - item: D3
   - item: Java
   - item: C++
   - item: HTML/CSS
+  - item: SQL
+
+frameworks:
+  - item: Ruby on Rails
+  - item: Django
+  - item: React
+  - item: D3
 
 tools:
-  - item: Git + Github
-  - item: Command Line
+  - item: Git
   - item: Chrome DevTools
+  - item: Xcode
   - item: Docker
   - item: Firebase
   - item: Postman
+  - item: MySQL

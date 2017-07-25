@@ -1,20 +1,15 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
-@font-face {
-  font-family: 'Montserrat';
-  font-weight: bold;
-  font-style: normal; }
-
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Nunito|Ubuntu");
 html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-family: "Ubuntu", Helvetica, Arial, sans-serif;
   height: 100%;
   color: #f2f2f2;
   background-color: #1b1b1b; }
 
 h1 {
-  font-family: "Montserrat", Georgia, serif;
+  font-family: "Nunito", Georgia, serif;
   margin: 0; }
 
 h2, h3 {
@@ -24,7 +19,7 @@ h2, h3 {
 p {
   margin: 0;
   margin-bottom: 10px;
-  font-family: "Montserrat", Helvetica, Arial, sans-serif; }
+  font-family: "Ubuntu", Helvetica, Arial, sans-serif; }
 
 a {
   text-decoration: none;
@@ -123,7 +118,7 @@ ul {
 
 #header-section .header-wrapper {
   padding: 0;
-  padding-bottom: 20px; }
+  padding-bottom: 15px; }
   #header-section .header-wrapper .header-body {
     width: 100%;
     height: 101vh;
@@ -199,8 +194,8 @@ ul {
       #header-section .header-wrapper .header-body .header-content .subtext,
       #header-section .header-wrapper .header-body .header-content .btn {
         opacity: 0;
-        animation-duration: 0.8s;
-        animation-delay: 0.3s;
+        animation-duration: 1s;
+        animation-delay: 0.2s;
         animation-fill-mode: forwards; }
         .no-cssanimations #header-section .header-wrapper .header-body .header-content .heading, .no-cssanimations
         #header-section .header-wrapper .header-body .header-content .heading .name, .no-cssanimations
@@ -264,7 +259,7 @@ ul {
             line-height: 1.5;
             color: #f2f2f2;
             text-transform: uppercase;
-            font-family: "Gotham", Helvetica, Arial, sans-serif;
+            font-family: "Nunito", Helvetica, Arial, sans-serif;
             opacity: 1;
             margin: 0; }
             @media only screen and (max-width: 480px) {
@@ -278,43 +273,11 @@ ul {
       margin: 0 auto;
       text-align: center;
       color: #f2f2f2; }
-      #header-section .header-wrapper .header-body .scroll-down-wrapper .scroll-down {
+      #header-section .header-wrapper .header-body .scroll-down-wrapper .chevron {
+        transform: rotate(90deg);
+        height: 20px;
         display: block;
-        width: 70px;
-        margin: 0 auto;
-        transition: all 0.3s ease; }
-        #header-section .header-wrapper .header-body .scroll-down-wrapper .scroll-down:hover, #header-section .header-wrapper .header-body .scroll-down-wrapper .scroll-down:focus {
-          transition: all 0.3s ease; }
-          #header-section .header-wrapper .header-body .scroll-down-wrapper .scroll-down:hover .logo, #header-section .header-wrapper .header-body .scroll-down-wrapper .scroll-down:focus .logo {
-            opacity: 0; }
-          #header-section .header-wrapper .header-body .scroll-down-wrapper .scroll-down:hover .scroll-down-text, #header-section .header-wrapper .header-body .scroll-down-wrapper .scroll-down:focus .scroll-down-text {
-            opacity: 1;
-            visibility: visible; }
-        #header-section .header-wrapper .header-body .scroll-down-wrapper .scroll-down .logo {
-          width: 35px;
-          transition: opacity 0.5s ease, visibility 0.5s; }
-        #header-section .header-wrapper .header-body .scroll-down-wrapper .scroll-down .scroll-down-text {
-          color: #f2f2f2;
-          font-family: "Gotham", Helvetica, Arial, sans-serif;
-          text-transform: uppercase;
-          font-size: 12px;
-          font-weight: 700;
-          text-align: center;
-          height: 100%;
-          opacity: 0;
-          padding-top: 0.5em;
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          transition: opacity 0.5s ease, visibility 0.5s;
-          visibility: hidden;
-          width: 100%; }
-          #header-section .header-wrapper .header-body .scroll-down-wrapper .scroll-down .scroll-down-text .chevron {
-            transform: rotate(90deg);
-            height: 20px;
-            display: block;
-            margin: 10px auto; }
+        margin: 10px auto; }
 
 #bio-section .section-subheading {
   width: 60%;
