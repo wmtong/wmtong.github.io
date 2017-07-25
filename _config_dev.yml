@@ -2,8 +2,8 @@
 name: William Tong
 title: William Tong, Software Engineer
 description: Just a dude who loves solving problems and creating stuff with code.
-url: "http://wmtong.github.io"
-baseurl: "/portfolio"
+url: http://williamtong.me/
+baseurl: ""
 email: wmtong@wustl.edu
 social:
   - title: email
