@@ -1,0 +1,18 @@
+development:
+  - item: Swift
+  - item: JavaScript (ES6)
+  - item: Python
+  - item: Ruby on Rails
+  - item: React
+  - item: D3
+  - item: Java
+  - item: C++
+  - item: HTML/CSS
+
+tools:
+  - item: Git + Github
+  - item: Command Line
+  - item: Chrome DevTools
+  - item: Docker
+  - item: Firebase
+  - item: Postman

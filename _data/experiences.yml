@@ -1,0 +1,23 @@
+- position: Teaching Assistant
+  company: Washington University in Saint Louis Computer Science &amp; Engineering
+  url: https://cse.wustl.edu/Pages/default.aspx
+  description: TA for Data Structures and Algorithms class. Mentored students through labs and studios.
+  date: Jan 2016 - Present
+
+- position: Freelance iOS Developer
+  company: Tallyfy
+  url: https://tallyfy.com/
+  description: Designed first iteration of mobile app and helped architect v2 of Tallyfy REST API. Conducted unit testing via Postman.
+  date: Jun 2016 - Aug 2016
+
+- position: Software Developer
+  company: WashU Student Technology Services
+  url: https://sts.wustl.edu/
+  description: Create software solutions for clients across WashU campuses. Implemented transportation feature in WUSTL Mobile App.
+  date: Oct 2016 - Present
+
+- position: Software Engineering Intern
+  company: Cerner Corporation
+  url: https://www.cerner.com/
+  description: Designed first iteration of mobile app and helped architect v2 of Tallyfy REST API. Conducted unit testing via Postman.
+  date: Jun 2016 - Aug 2016

@@ -1,0 +1,39 @@
+- title: FindMe
+  code: https://github.com/FindMeCP/FindMe
+  description: FindMe is a friend-locator iOS app that allows you to follow a friend's location in real time.
+  # img: 
+  used:
+    - thing: Swift
+    - thing: Firebase
+    - thing: Google Maps API
+
+- title: D3 Visualization
+  # demo: somewhere
+  # code: https://github.com/wmtong/d3-visual
+  description: A visualization project that I did in order to learn the Rails framework and familiarize myself with the robust React and D3 libraries.
+  # img:
+  used:
+    - thing: Ruby on Rails
+    - thing: React.js
+    - thing: Data Driven Documents (D3.js)
+
+- title: Stroop
+  demo: https://itunes.apple.com/us/app/stroop/id1073492098?ls=1&mt=8
+  description: Stroop is an iOS game that tests response time through word-color phenomenon with the same name. On the App Store with 500+ downloads and 1200+ impressions.
+  # img:
+  used:
+    - thing: Swift
+
+# - title: Machine Learning Tutorial
+#   demo:
+#   description:
+#   # img:
+#   used:
+#     - thing: Python
+
+# - title: Google Actions
+#   demo:
+#   description:
+#   # img:
+#   used:
+#     - thing:

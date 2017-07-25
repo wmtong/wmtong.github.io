@@ -1,0 +1,36 @@
+# Site settings
+name: William Tong
+title: William Tong, Software Engineer
+description: Just a dude who loves solving problems and creating stuff with code.
+url: http://williamtong.me/
+baseurl: "/"
+email: wmtong@wustl.edu
+social:
+  - title: email
+    url: mailto:wmtong@wustl.edu
+  - title: github
+    url: https://github.com/wmtong
+  - title: linkedin
+    url: https://www.linkedin.com/in/wmtong
+
+# Build settings
+markdown: kramdown
+
+exclude:
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "*.gemspec"
+  - "README.md"
+  - "node_modules"
+  - "build"
+  - "gulpfile.js"
+  - "package.json"
+
+keep_files:
+  - "CNAME"
+  - ".git"
+  - ".gitignore"
+
+plugins:
+  - jekyll-minifier
+  - jekyll-sitemap
