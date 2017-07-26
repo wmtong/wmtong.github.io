@@ -11,26 +11,28 @@ const uglify   = require('gulp-uglify');
 const browserSync  = require('browser-sync').create();
 const cp           = require('child_process');
 
-gulp.task('sass', () => {
-  return gulp.src('_scss/**/*.scss')
-      .pipe( sass())
-      .pipe(gulp.dest('_site/css'))
-});
+const siteRoot = '_site';
+const scssPath     = ['_scss/**/*.scss'];
+const jsPath       = ['_scripts/*.js'];
+const imgPath      = ['img/**/*.+(png|jpg|gif|svg)']
+const templatePath = [ '*.html', '+(_includes|_layouts)/*.html', '*.yml', '_data/*.yml'];
+
+gulp.task( 'sass', () => {
+    return gulp.src( scssPath )
+    .pipe( sass( { includePaths: ['scss'] } ) )
+    .pipe( cleanCSS( {compatibility: 'ie8'} ) )
+    .pipe( gulp.dest( '_site/css' ) )
+    .pipe( gulp.dest( 'css' ) );
+  });
 
 gulp.task('images', () => {
-  return gulp.src( 'img/**/*.+(png|jpg|gif|svg)' )
+  return gulp.src( imgPath )
   .pipe( imagemin() )
   .pipe(gulp.dest( '_site/img' ));
 });
 
-gulp.task('fonts', () => {
-  return gulp.src('app/fonts/**/*')
-  .pipe(gulp.dest('dist/fonts'))
-})
-
-
 gulp.task( 'scripts', () => {
-    return gulp.src( '_scripts/*.js' )
+    return gulp.src( jsPath )
     .pipe( eslint( {
       useEslintrc: true
     } ) )
@@ -42,23 +44,34 @@ gulp.task( 'scripts', () => {
     .pipe( gulp.dest( 'js' ) );
   });
 
-// Deletes the entire _site directory.
-gulp.task('clean:jekyll', function(callback) {
-    del(['_site']);
-    callback();
-});
-
-// Main clean task.
-// Deletes _site directory and processed assets.
-gulp.task('clean', ['clean:jekyll',
-    'clean:fonts',
-    'clean:images',
-    'clean:scripts',
-    'clean:styles']);
-
 gulp.task('jekyll-build', done => {
     return cp.spawn( 'jekyll' , ['build'], {stdio: 'inherit'})
     .on('close', done);
   });
 
-gulp.task('build', ['sass', 'scripts', 'images']);
+// run `jekyll build` with _config_dev.yml
+gulp.task('jekyll-dev', done => {
+  return cp.spawn( 'jekyll' , ['build', '--config', '_config.yml,_config_dev.yml'], {stdio: 'inherit'})
+  .on('close', done);
+});
+
+// Rebuild Jekyll then reload the page
+gulp.task('jekyll-rebuild', ['jekyll-dev'], () => {
+  browserSync.reload();
+});
+
+gulp.task('default', ['jekyll-dev'], () => {
+  browserSync.init({
+    port: 4000,
+    server: {
+      baseDir: '_site'
+    }
+  });
+
+  gulp.watch(scssPath, ['sass', 'jekyll-rebuild']);
+  gulp.watch(jsPath, ['scripts', 'jekyll-rebuild']);
+  gulp.watch(templatePath, ['jekyll-rebuild']);
+});
+
+
+gulp.task('build', ['sass', 'scripts', 'images', 'jekyll-build']);

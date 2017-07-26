@@ -31,5 +31,8 @@
     "gulp",
     "sass",
     "browsersync"
-  ]
+  ],
+  "dependencies": {
+    "rellax": "^1.0.0"
+  }
 }
