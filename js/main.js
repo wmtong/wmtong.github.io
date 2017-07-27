@@ -1,1 +1,1 @@
-"use strict";$(document).ready(function(){var e=new Rellax(".rellax");console.log("RELAX!",e)});
+"use strict";$(document).ready(function(){new Rellax(".rellax")});

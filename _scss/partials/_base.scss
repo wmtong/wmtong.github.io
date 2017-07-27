@@ -9,19 +9,18 @@ body {
 }
 
 h1 {
-  font-family: $Nunito, $serif-stack;
+  font-family: $Nunito;
   margin: 0;
 }
 
 h2, h3 {
-  font-family: $Montserrat, $sans-serif-stack;
+  font-family: $Montserrat;
   margin: 10px 0;
 }
 
 p {
-  margin: 0;
-  margin-bottom: 10px;
-  font-family: $Ubuntu, $sans-serif-stack;
+  font-family: $Ubuntu;
+  margin: 10px 0;
 }
 
 a {
@@ -46,55 +45,50 @@ ul {
 }
 
 .section {
-  width: 100%;
-  height: auto;
-  min-height: 600px;
-  padding: 0;
-  overflow: hidden;
-  color: $white;
-  position: relative;
-  &:first-of-type {
-    background-color: #0054c7
+  padding: 100px;
+  @include MQ(MM) {
+    padding: 100px 50px;
   }
+  @include MQ(S400) {
+    padding: 100px 25px;
+  }
+  height: auto;
+  min-height: 500px;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  color: $dark-grey;
+  position: relative;
   &:nth-of-type(odd) {
-    background-color: #5b5b5b;
+    background-color: $grey;
   }
   &:nth-of-type(even) {
-    background-color: $dark-grey;
+    background-color: white;
   }
   a {
     display: block;
   }
-  .section-wrapper {
-    padding: 100px;
-    @include MQ(MM) {
-      padding: 100px 50px;
+  h1 {
+    font-size: 3em;
+  }
+  p {
+    font-size: 1.3em;
+    line-height: 1.5em;
+    @include MQ(SM) {
+      font-size: 1em;
     }
-    @include MQ(S400) {
-      padding: 100px 25px;
-    }
-    h1 {
-      font-size: 3em;
-    }
-    p {
-      font-size: 1.3em;
-      line-height: 1.5em;
-      @include MQ(SM) {
-        font-size: 1em;
-      }
-    }
-    .divider {
-      display: block;
-      margin: 25px 0px;
-      width: 100px;
-      height: 3px;
-      background-color: orange;
-    }
-    .center {
-      margin-right: auto;
-      margin-left: auto;
-      text-align: center;
-    }
+  }
+  .divider {
+    display: block;
+    margin: 25px 0px;
+    width: 100px;
+    height: 3px;
+    background-color: orange;
+  }
+  .center {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
   }
 }
 
@@ -110,7 +104,11 @@ ul {
   overflow: hidden;
 }
 
+#rellax-body {
+  height: 100%
+}
+
 #header-section .bg {
   z-index: 0;
-  background-image: url('../img/stars.jpg');
+  background-image: url('../img/mtn.jpg');
 }

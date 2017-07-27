@@ -1,24 +1,22 @@
 #header-section {
+  height: 100%;
   .header-wrapper {
+    height: 100%;
     padding: 0;
-    padding-bottom: 15px;
     .header-body {
+      height: 100%;
       width: 100%;
-      height: 101vh;
       overflow: hidden;
       position: relative;
       display: flex;
       align-items: center;
-      justify-content: center;
       @include reveal(reveal-up, 100%);
       @include reveal(reveal-down, -100%);
-      @keyframes loading-mask {
-        0%,
-        100% {
+      @keyframes loading-line {
+        0% {
           transform: scaleX(0);
         }
-        40%,
-        60% {
+        40% {
           transform: scaleX(1);
         }
       }
@@ -29,7 +27,6 @@
         position: relative;
         top: -5%;
         .heading,
-        .heading .name,
         .subtext,
         .btn {
           opacity: 0;
@@ -54,7 +51,7 @@
             font-size: 4em;
           }
           &:after {
-            content: attr(data-content);
+            content: attr(name-content);
             position: absolute;
             top: 0;
             left: 0;
@@ -64,26 +61,25 @@
             animation-name: reveal-up;
             animation-fill-mode: backwards;
             animation-duration: 0.4s;
-            animation-delay: 0.7s;
+            animation-delay: 0.3s;
           }
-          .name {
+          .line {
             position: relative;
             display: inline-block;
             opacity: 1;
             &:before {
-              /* this is the line */
               content: '';
+              height: 5px;
+              width: 130%;
               position: absolute;
-              top: calc(100% + 8px);
-              left: -1em;
-              height: 2px;
-              width: calc(100% + 2em);
+              top: 110%;
+              left: -15%;
               background-color: $white;
-              animation: loading-mask 1s .3s both;
+              animation: loading-line 1s;
             }
           }
         }
-        .action-wrapper {
+        .subheader-content {
           overflow: hidden;
           .subtext {
             position: relative;
@@ -92,37 +88,20 @@
             animation-name: reveal-down;
             animation-duration: 0.4s;
             animation-delay: 0.7s;
-            .btn {
+            .label {
               display: inline-block;
-              padding: 1.2em 0;
-              font-size: 1.3rem;
-              font-weight: 500;
-              line-height: 1.5;
-              color: $white;
-              text-transform: uppercase;
-              font-family: $Nunito, $sans-serif-stack;
-              opacity: 1;
               margin: 0;
+              padding: 0.8em 0;
+              font-size: 1.6rem;
+              font-weight: 200;
+              color: $white;
+              font-family: $Ubuntu;
+              opacity: 1;
               @include MQ(SM) {
-                font-size: 1.1em;
+                font-size: 1.3em;
               }
             }
           }
-        }
-      }
-      .scroll-down-wrapper {
-        position: absolute;
-        bottom: 50px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        text-align: center;
-        color: $white;
-        .chevron {
-          transform: rotate(90deg);
-          height: 20px;
-          display: block;
-          margin: 10px auto;
         }
       }
     }
