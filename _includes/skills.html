@@ -1,8 +1,8 @@
 <section id="skills-section" class="section">
   <div class="section-wrapper">
     <div class="fade-in">
-      <h1 class="section-heading">Skills</h1>
-      <span class="divider"></span>
+      <h1 class="section-heading center">Skills</h1>
+      <span class="divider center"></span>
       <div class="skills-wrapper">
         {% for skill in site.data.skills %}
         <div class="skills-block">
@@ -11,6 +11,12 @@
             <ul>
                 {% for i in skill[1] %}
                 <li class="skills-item">{{i.item}}</li>
+                  {% if i.icon_tag %}
+                  <i class="devicon-{{i.icon_tag}}-plain colored" style="font-size:36px;"></i>
+                  {% endif %}
+                  {% if i.icon_url %}
+                    <i class="{{i.icon_url}}" style="font-size:36px;"></i>
+                  {% endif %}
                 {% endfor %}
             </ul>
           </div>

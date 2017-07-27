@@ -1,23 +1,42 @@
 languages:
   - item: Swift
+    icon_tag: swift
+    icon_url: devicon-swift-plain colored
   - item: JavaScript (ES6)
+    icon_tag: javascript
   - item: Python
+    icon_tag: python
   - item: Java
+    icon_tag: java
   - item: C++
-  - item: HTML/CSS
-  - item: SQL
+    icon_tag: cplusplus
+  - item: HTML
+    icon_tag: html5
+  - item: CSS
+    icon_tag: css3
 
-frameworks:
+frameworks/libraries:
   - item: Ruby on Rails
+    icon_tag: rails
   - item: Django
+    icon_tag: django
   - item: React
+    icon_tag: react
   - item: D3
+    icon_tag: d3js
 
 tools:
   - item: Git
+    icon_tag: git
   - item: Chrome DevTools
+    icon_tag: chrome
   - item: Xcode
+    icon_tag: java
   - item: Docker
-  - item: Firebase
-  - item: Postman
+    icon_tag: docker
   - item: MySQL
+    icon_tag: mysql
+  - item: Firebase
+    icon_tag: firebase
+  - item: Postman
+    icon_tag: postman

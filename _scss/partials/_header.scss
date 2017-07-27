@@ -69,11 +69,11 @@
             opacity: 1;
             &:before {
               content: '';
-              height: 5px;
-              width: 130%;
               position: absolute;
-              top: 110%;
-              left: -15%;
+              top: calc(100% + 8px);
+              height: 2px;
+              width: calc(100% + 2em);
+              left: -1em;
               background-color: $white;
               animation: loading-line 1s;
             }
