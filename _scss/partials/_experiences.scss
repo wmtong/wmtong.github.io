@@ -1,19 +1,53 @@
 #experiences-section {
-  .section-subheading {
-    width: 60%;
-    font-size: 1.2em;
-    font-weight: 500;
-    line-height: 1.5;
-    margin-top: 1em;
-    @include MQ(ML) {
-      width: 100%;
-    }
-  }
-  .experience-wrapper {
+  background-color: $light-grey;
+  .experiences-wrapper {
     padding: 0;
-    .experience-block {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    @include MQ(M) {
+      display: block;
+      height: auto;
+    }
+    .experiences-block {
+      background-color: white;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       display: inline-block;
-      width: 30%;
+      text-align: left;
+      margin: 20px 30px;
+      min-height: 240px;
+      width: 40%;
+      @include MQ(M) {
+        width: 70%;
+      }
+      @include MQ(SM) {
+        width: 85%;
+      }
+      .experiences-content {
+        padding: 20px;
+        .position {
+          color: $blue;
+        }
+        .date {
+          font-size: 0.8em;
+          color: $blue;
+          @include MQ(M) {
+            font-size: 0.7em;
+          }
+        }
+        .company {
+          font-size: 1em;
+          @include MQ(M) {
+            font-size: 0.9em;
+          }
+        }
+        .job {
+          font-size: 0.9em;
+          @include MQ(M) {
+            font-size: 0.8em;
+          }
+        }
+      }
     }
   }
 }

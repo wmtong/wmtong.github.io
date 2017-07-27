@@ -1,18 +1,19 @@
 <section id="bio-section" class="section">
   <div class="section-wrapper">
+    {% for bio in site.data.bio %}
+    <h1 class="section-heading bio-heading">{{ bio.heading }}</h1>
     <div class="fade-in">
-      {% for bio in site.data.bio %}
-      <h1 class="section-heading">{{ bio.heading }}</h1>
       <h3 class="section-subheading">{{ bio.subheading }}</h3>
       <span class="divider"></span>
       <div class="bio-wrapper">
+        <img class="propic" src="img/avatar.jpg" alt="propic">
         <div class="bio-text-wrapper">
           {% for info in bio.info %}
           <p class="bio-text">{{ info.item }}</p>
           {% endfor %}
         </div>
       </div>
-      {% endfor %}
     </div>
+    {% endfor %}
   </div>
 </section>

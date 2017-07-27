@@ -3,23 +3,19 @@
     <div class="fade-in">
       <h1 class="section-heading">Skills</h1>
       <span class="divider"></span>
-      <div class="skills-flex-wrapper">
-
+      <div class="skills-wrapper">
         {% for skill in site.data.skills %}
-        <div class="flex-item dev-wrapper">
-          <h2 class="skills-heading">
-            <span>{{skill[0]}}</span>
-          </h2>
-          <ul>
-              {% for i in skill[1] %}
-              <li class="dev-item">{{i.item}}</li>
-              {% endfor %}
-
-          </ul>
+        <div class="skills-block">
+          <div class="skills-content">
+            <h2 class="skills-heading">{{skill[0]}}</h2>
+            <ul>
+                {% for i in skill[1] %}
+                <li class="skills-item">{{i.item}}</li>
+                {% endfor %}
+            </ul>
+          </div>
         </div>
-
         {% endfor %}
-
       </div>
     </div>
   </div>

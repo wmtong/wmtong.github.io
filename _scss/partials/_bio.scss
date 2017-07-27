@@ -1,7 +1,9 @@
 #bio-section {
+  padding-top: 60px;
+
   .section-subheading {
     width: 60%;
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: 500;
     line-height: 1.5;
     margin-top: 1em;
@@ -23,7 +25,27 @@
       }
       .bio-text {
         margin-bottom: 10px;
-        font-size: 1.15em;
+        font-size: 1em;
+      }
+    }
+    .propic {
+      display: inline-block;
+      width: 35%;
+      height: auto;
+      border-radius: 50%;
+      margin-top: -150px;
+      float: right;
+      max-width: 450px;
+      @include MQ(ML) {
+        margin-top: 0px;
+      }
+      @include MQ(MM) {
+        float: none;
+        margin: 10px 0 40px 0;
+        width: 300px;
+      }
+      @include MQ(S400) {
+        width: 250px;
       }
     }
   }

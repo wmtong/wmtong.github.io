@@ -1,26 +1,23 @@
-<section id="experience-section" class="section">
-  <div class="bg" data-anchor-target="#experience-section"
+<section id="experiences-section" class="section">
+  <div class="bg" data-anchor-target="#experiences-section"
   data-bottom-top="transform: translate3d(0px, -150px, 0px);"
   data-top-bottom="transform: translate3d(0px, 150px, 0px);"
   ></div>
   <div class="section-wrapper">
     <div class="fade-in">
-      <h1 class="section-heading">Experience</h1>
-      <span class="divider"></span>
-      <div class="experience-wrapper">
-        <div>
-          {% for item in site.data.experiences %}
-          <div class="experience-block">
-            <div class="experience-content">
-              <h2 class="position">{{item.position}}</h2>
-              <h3 class="company"><a href="{{item.url}}" target="_blank">{{item.company}}</a></h3>
-              <p class="job-desc">{{item.description}}</p>
-            </div>
+      <h1 class="section-heading center">Experience</h1>
+      <span class="divider center"></span>
+      <div class="experiences-wrapper center">
+        {% for item in site.data.experiences %}
+        <div class="experiences-block">
+          <div class="experiences-content">
+            <h2 class="position">{{item.position}}</h2>
+            <h3 class="company"><a href="{{item.url}}">{{item.company}}</a></h3>
             <span class="date">{{item.date}}</span>
+            <p class="job">{{item.description}}</p>
           </div>
-          {% endfor %}
         </div>
-        <i class="down-arrow"></i>
+        {% endfor %}
       </div>
     </div>
   </div>
