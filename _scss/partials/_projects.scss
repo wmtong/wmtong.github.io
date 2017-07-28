@@ -1,0 +1,49 @@
+#projects-section {
+  .projects-wrapper {
+    padding: 0;
+    justify-content:center;
+    @include MQ(M) {
+      display: block;
+      height: auto;
+    }
+    .projects-block {
+      background-color: $white;
+      display: block;
+      text-align: left;
+      margin: 20px 30px;
+      min-height: 100px;
+      width: 100%;
+      @include MQ(M) {
+        width: 70%;
+      }
+      @include MQ(SM) {
+        width: 85%;
+      }
+      .projects-content {
+        padding: 20px;
+        .position {
+          color: $blue;
+        }
+        .date {
+          font-size: 0.8em;
+          color: $blue;
+          @include MQ(M) {
+            font-size: 0.7em;
+          }
+        }
+        .company {
+          font-size: 1em;
+          @include MQ(M) {
+            font-size: 0.9em;
+          }
+        }
+        .job {
+          font-size: 0.9em;
+          @include MQ(M) {
+            font-size: 0.8em;
+          }
+        }
+      }
+    }
+  }
+}

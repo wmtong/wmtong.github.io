@@ -1,0 +1,28 @@
+<section id="projects-section" class="section">
+  <div class="section-wrapper">
+    <div class="fade-in center">
+      <span class="divider">
+        <h1 class="section-heading">Some of My Creations</h1>
+      </span>
+      <div class="projects-wrapper center">
+        {% for item in site.data.projects %}
+        <div class="projects-block">
+          <div class="projects-content">
+            <h2 class="position">{{item.title}}</h2>
+            {% if item.code %}
+            <h3 class="company"><a href="{{item.code}}">Code</a></h3>
+            {% endif %}
+            {% if item.demo %}
+            <h3 class="company"><a href="{{item.demo}}">Demo</a></h3>
+            {% endif %}
+            <p class="job">{{item.description}}</p>
+            {% for tool in item.used %}
+              <span class="job">{{tool.thing}}</span>
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

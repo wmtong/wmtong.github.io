@@ -59,7 +59,12 @@ ul {
   overflow: hidden;
   position: relative;
   color: $dark-grey;
-  background-color: white;
+  &:nth-of-type(odd) {
+    background-color: $light-grey;
+  }
+  &:nth-of-type(even) {
+    background-color: $white;
+  }
   a {
     display: block;
   }
@@ -74,11 +79,10 @@ ul {
     }
   }
   .divider {
-    display: block;
-    margin: 25px 0px;
-    width: 100px;
-    height: 2px;
-    background-color: $orange;
+    display:inline-block;
+    border-bottom:2px solid $orange;
+    padding-bottom:10px;
+    margin-bottom: 20px;
   }
   .center {
     margin-right: auto;
