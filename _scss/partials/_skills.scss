@@ -4,22 +4,22 @@
     display:flex;
     flex-flow: row wrap;
     justify-content:center;
-    @include MQ(M) {
+    @include MQ(L) {
       display: block;
       height: auto;
     }
     .skills-block {
-      background-color: $dark-grey;
+      background-color: $dark-gray;
       color: $white;
       display: inline-block;
       text-align: left;
       margin: 10px 1.5%;
       min-height: 240px;
       width: 30%;
-      @include MQ(M) {
+      @include MQ(L) {
         width: 70%;
       }
-      @include MQ(SM) {
+      @include MQ(M) {
         width: 85%;
       }
       .skills-content {
@@ -28,7 +28,7 @@
           color: $blue;
         }
         .skills-item {
-
+          padding-bottom: 10px;
         }
       }
     }

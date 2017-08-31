@@ -5,7 +5,7 @@ body {
   font-family: $Montserrat;
   height: 100%;
   color: $white;
-  background-color: $dark-grey;
+  background-color: $dark-gray;
 }
 
 h1 {
@@ -25,7 +25,7 @@ p {
 
 a {
   text-decoration: none;
-  color: $dark-grey;
+  color: $dark-gray;
 }
 
 ul {
@@ -46,10 +46,10 @@ ul {
 
 .section {
   padding: 50px 100px 70px 100px;
-  @include MQ(MM) {
+  @include MQ(XL) {
     padding: 25px 50px 35px 50px;
   }
-  @include MQ(S400) {
+  @include MQ(S) {
     padding: 12px 25px 18px 25px;
   }
   height: auto;
@@ -58,9 +58,9 @@ ul {
   width: 100%;
   overflow: hidden;
   position: relative;
-  color: $dark-grey;
+  color: $dark-gray;
   &:nth-of-type(odd) {
-    background-color: $light-grey;
+    background-color: $light-gray;
   }
   &:nth-of-type(even) {
     background-color: $white;
@@ -74,15 +74,22 @@ ul {
   p {
     font-size: 1.3em;
     line-height: 1.5em;
-    @include MQ(SM) {
+    @include MQ(M) {
       font-size: 1em;
     }
   }
+
+
   .divider {
     display:inline-block;
     border-bottom:2px solid $orange;
+    padding-top:10px;
     padding-bottom:10px;
     margin-bottom: 20px;
+    @include reveal(reveal-down, -100%);
+    &:hover {
+      background-color: $orange;
+    }
   }
   .center {
     margin-right: auto;

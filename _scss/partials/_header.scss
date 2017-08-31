@@ -42,12 +42,12 @@
           color: transparent;
           overflow: hidden;
           opacity: 1;
-          @include MQ(M) {
+          @include MQ(L) {
             .name:before {
               top: calc(100% + 18px);
             }
           }
-          @include MQ(SM) {
+          @include MQ(M) {
             font-size: 4em;
           }
           &:after {
@@ -97,7 +97,7 @@
               color: $white;
               font-family: $Ubuntu;
               opacity: 1;
-              @include MQ(SM) {
+              @include MQ(M) {
                 font-size: 1.3em;
               }
             }

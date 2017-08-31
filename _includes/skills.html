@@ -11,12 +11,12 @@
             <h2 class="skills-heading">{{skill[0]}}</h2>
             <ul>
                 {% for i in skill[1] %}
-                <li class="skills-item">{{i.item}}</li>
+                <li class="skills-item"></li>
                   {% if i.icon_tag %}
-                  <i class="devicon-{{i.icon_tag}}-plain colored" style="font-size:36px;"></i>
-                  {% endif %}
-                  {% if i.icon_url %}
-                    <i class="{{i.icon_url}}" style="font-size:36px;"></i>
+                  <div class="icon">
+                    <i class="devicon-{{i.icon_tag}}-plain colored" style="font-size:50px;"></i>
+                    &nbsp; <span class="icon-title">{{i.item}}</span>
+                  </div>
                   {% endif %}
                 {% endfor %}
             </ul>

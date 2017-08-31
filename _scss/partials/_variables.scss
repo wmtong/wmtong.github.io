@@ -1,60 +1,40 @@
-// Colors
+/* Colors */
 $button-height: 25px;
 $button-width: 30px;
 $black: #070707;
-$dark-grey: #1b1b1b;
-$light-grey: #f0f0f0;
-$grey: #707070;
-$smoke: #f5f5f5;
+$dark-gray: #1b1b1b;
+$light-gray: #f0f0f0;
 $white: #ffffff;
 $blue: #00c8d8;
 $orange: #ffcc00;
-$magenta: #ca1f7b;
-// Fonts
+
+/* Fonts */
 $Ubuntu: 'Ubuntu';
 $Nunito: 'Nunito';
 $Montserrat: 'Montserrat';
-// Breakpoints
-$S: 330px;
-$S400: 400px;
-$S440: 440px;
-$SM: 480px;
-$S600: 600px;
-$S660: 660px;
-$M: 768px;
-$MM: 900px;
-$ML: 1000px;
-$L: 1170px;
-// Media queries
+
+/* Size Breakpoints */
+$XS: 330px;
+$S: 400px;
+$M: 480px;
+$L: 768px;
+$XL: 900px;
+
+/* Media queries */
 @mixin MQ($canvas) {
   @if $canvas==S {
     @media only screen and (max-width: $S) { @content; }
   }
-  @else if $canvas==S400 {
-    @media only screen and (max-width: $S400) { @content; }
-  }
-  @else if $canvas==S440 {
-    @media only screen and (max-width: $S440) { @content; }
-  }
-  @else if $canvas==SM {
-    @media only screen and (max-width: $SM) { @content; }
-  }
-  @else if $canvas==S600 {
-    @media only screen and (max-width: $S600) { @content; }
-  }
-  @else if $canvas==S660 {
-    @media only screen and (max-width: $S660) { @content; }
+  @else if $canvas==S {
+    @media only screen and (max-width: $S) { @content; }
   }
   @else if $canvas==M {
     @media only screen and (max-width: $M) { @content; }
   }
-  @else if $canvas==MM {
-    @media only screen and (max-width: $MM) { @content; }
-  }
-  @else if $canvas==ML {
-    @media only screen and (max-width: $ML) { @content; }
-  }
   @else if $canvas==L {
     @media only screen and (max-width: $L) { @content; }
+  }
+  @else if $canvas==XL {
+    @media only screen and (max-width: $XL) { @content; }
   }
 }

@@ -1,7 +1,6 @@
 languages:
   - item: Swift
     icon_tag: swift
-    icon_url: devicon-swift-plain colored
   - item: JavaScript (ES6)
     icon_tag: javascript
   - item: Python
@@ -15,7 +14,7 @@ languages:
   - item: CSS
     icon_tag: css3
 
-frameworks/libraries:
+frameworks:
   - item: Ruby on Rails
     icon_tag: rails
   - item: Django
@@ -31,12 +30,12 @@ tools:
   - item: Chrome DevTools
     icon_tag: chrome
   - item: Xcode
-    icon_tag: java
+    icon_tag: swift
   - item: Docker
     icon_tag: docker
   - item: MySQL
     icon_tag: mysql
   - item: Firebase
-    icon_tag: firebase
-  - item: Postman
-    icon_tag: postman
+    icon_tag: google
+  # - item: Postman
+  #   icon_tag: postman

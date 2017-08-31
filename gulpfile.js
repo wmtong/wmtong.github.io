@@ -20,7 +20,7 @@ const templatePath = [ '*.html', '+(_includes|_layouts)/*.html', '*.yml', '_data
 gulp.task( 'sass', () => {
     return gulp.src( scssPath )
     .pipe( sass( { includePaths: ['scss'] } ) )
-    .pipe( cleanCSS( {compatibility: 'ie8'} ) )
+    .pipe( cleanCSS() )
     .pipe( gulp.dest( '_site/css' ) )
     .pipe( gulp.dest( 'css' ) );
   });

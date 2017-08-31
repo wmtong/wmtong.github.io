@@ -2,22 +2,26 @@
   <div class="section-wrapper">
     <div class="fade-in center">
       <span class="divider">
-        <h1 class="section-heading">Some of My Creations</h1>
+        <h1 class="section-heading">My Creations</h1>
       </span>
       <div class="projects-wrapper center">
         {% for item in site.data.projects %}
         <div class="projects-block">
-          <div class="projects-content">
-            <h2 class="position">{{item.title}}</h2>
-            {% if item.code %}
-            <h3 class="company"><a href="{{item.code}}">Code</a></h3>
+          <div class="projects-image">
+            {% if item.iframe %}
+              <iframe class="propic" src="{{item.iframe}}"></iframe>
+            {% else %}
+              <img class="propic" src="{{item.img}}" alt="project-image" >
             {% endif %}
-            {% if item.demo %}
-            <h3 class="company"><a href="{{item.demo}}">Demo</a></h3>
+          </div>
+          <div class="projects-content">
+            <h2 class="position"><a class="project-title" href="{{item.demo}}">{{item.title}}</a></h2>
+            {% if item.code %}
+            <a class="project-link" href="{{item.code}}"><i class="devicon-github-plain" aria-hidden="true" style="font-size:1.4em;"></i></a>
             {% endif %}
             <p class="job">{{item.description}}</p>
             {% for tool in item.used %}
-              <span class="job">{{tool.thing}}</span>
+              <span class="tech">{{tool.thing}}</span>
             {% endfor %}
           </div>
         </div>
