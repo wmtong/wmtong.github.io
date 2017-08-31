@@ -3,7 +3,7 @@ name: William Tong
 title: William Tong
 description: Just a dude who loves solving problems and creating stuff with code.
 url: "http://wmtong.github.io"
-baseurl: "/portfolio"
+baseurl: ""
 email: wmtong@wustl.edu
 social:
   - title: email
