@@ -48,7 +48,7 @@
             }
           }
           @include MQ(M) {
-            font-size: 4em;
+            font-size: 3.6em;
           }
           &:after {
             content: attr(name-content);

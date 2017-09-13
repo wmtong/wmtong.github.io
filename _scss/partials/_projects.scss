@@ -12,15 +12,16 @@
       box-shadow: 0 0 20px  rgba(0,0,0,0.2);
       display: inline-block;
       text-align: left;
-      margin: 30px 40px;
+      margin: 20px 30px;
       min-height: 100px;
       width: 80%;
       padding: 20px;
       @include MQ(L) {
         width: 70%;
       }
-      @include MQ(M) {
-        width: 85%;
+      &:hover, &:focus {
+        transition: all 0.1s ease;
+        transform: scale(1.05) translateY(-5px);
       }
       .projects-image {
         position: relative;
@@ -59,6 +60,9 @@
         .project-title {
           display: inline;
           color: $blue;
+          @include MQ(M) {
+            font-size: 0.9em;
+          }
         }
         .position {
           display: inline;
@@ -78,7 +82,14 @@
           margin-bottom: 5px;
           border-radius: 5px;
           @include MQ(L) {
-            font-size: .8em;
+            font-size: .7em;
+          }
+        }
+        .job {
+          display: inline-block;
+          font-size: 1.1em;
+          @include MQ(L) {
+            font-size: 0.9em;
           }
         }
       }

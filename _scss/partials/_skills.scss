@@ -22,14 +22,30 @@
       @include MQ(M) {
         width: 85%;
       }
+      &:hover, &:focus {
+        transition: all 0.1s ease;
+        transform: scale(1.05) translateY(-5px);
+      }
       .skills-content {
         padding: 10px 30px;
         .skills-heading {
           color: $blue;
+          @include MQ(M) {
+            font-size: 1.2em;
+          }
         }
         .skills-item {
           padding-bottom: 10px;
+          .icon {
+            .icon-title {
+              @include MQ(M) {
+                font-size: 3em;
+              }
+            }
+          }
+
         }
+
       }
     }
   }

@@ -1,12 +1,13 @@
 <section id="footer" class="section">
   <div class="section-wrapper">
-    <!-- <ul class="social">
+    <div class="resume center"><a href="/resume.pdf">Grab a copy of my resume!</a></div>
+    <ul class="social">
       {% for link in site.social %}
-      <li class="social-item"><a href="{{link.url}}" target="_blank" class="icon {{link.title}}" title="{{link.title}}"><i class="devicon-{{link.title}}-plain colored" style="font-size:50px;"></i></a></li>
+      <li class="social-icon"><a href="{{link.url}}" class="icon {{link.title}}" title="{{link.title}}"><img src="img/icons/{{link.title}}.svg" alt="{{link.title}}"></a></li>
       {% endfor %}
-    </ul> -->
+    </ul>
     <div class="copyright center">
-      <p>&copy;&nbsp;{{site.name}} 2017</p>
+      <p>{{site.name}}&nbsp;&copy;&nbsp;2017</p>
     </div>
   </div>
 </section>

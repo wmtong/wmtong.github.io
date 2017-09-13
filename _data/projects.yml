@@ -1,7 +1,7 @@
 - title: FindMe
   demo: https://itunes.apple.com/us/app/findme-geolocation-app/id1274629614?ls=1&mt=8
   code: https://github.com/FindMeCP/FindMe
-  description: FindMe is a friend-locator iOS app that allows you to follow a friend's location in real time.
+  description: FindMe is a friend-locator iOS app that allows you to follow a friend's location in real time, with three different map views for easy
   img: img/findme/findme.png
   used:
     - thing: Swift
@@ -12,7 +12,6 @@
   demo: https://d3-graph-viz.herokuapp.com/
   code: https://github.com/wmtong/d3-graph-viz
   description: A visualization project that I did in order to learn the Rails framework and familiarize myself with the robust React and D3 libraries. Check it out! It's a very neat and responsive UI tool.
-  ifrakme: https://d3-graph-viz.herokuapp.com/
   img: img/d3_viz/d3viz.png
   used:
     - thing: Ruby on Rails

@@ -3,42 +3,39 @@
   height: 100px;
   min-height: 50px;
   color: $white;
-  @include MQ(M) {
-    height: 200px;
-  }
   .section-wrapper {
-    padding: 30px 0px 40px;
-    @include MQ(L) {
-      padding: 30px 0;
+    // padding: 30px 0px 40px;
+    .resume {
+      padding: 0px 0px;
+      border-radius: 5px;
+      background-color: $dark-gray;
+      &:hover, &:focus {
+        transition: all 0.1s ease;
+        transform: scale(1.05) translateY(-5px);
+      }
     }
     .social {
-      display: block;
-      font-size: 0;
       list-style: none;
-      margin: 0 auto;
+      display: block;
       padding: 0;
+      margin: 0 auto;
       text-align: center;
-      .social-item {
+      .social-icon {
         display: inline-block;
-        margin: 1rem 0.5rem;
-        @include MQ(S) {
-          margin: 1rem 0.3rem;
-        }
         a {
           display: block;
           position: relative;
           color: #fff;
           width: 2.5rem;
           height: 2.5rem;
-          position: relative;
         }
       }
     }
+    .copyright {
+      color: $white;
+      margin-top: 5px;
+      font-size: 12px;
+    }
   }
 
-  .copyright {
-    color: $white;
-    margin-top: 10px;
-    font-size: 14px;
-  }
 }
