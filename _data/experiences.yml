@@ -19,5 +19,5 @@
 - position: Software Engineering Intern
   company: Cerner Corporation
   url: https://www.cerner.com/
-  description: Designed first iteration of mobile app and helped architect v2 of Tallyfy REST API. Conducted unit testing via Postman.
+  description: Transformed RDBMS into D3 visualization through admin tool built from scratch with React, D3, and Rails. Catalyzed team shift towards a microservice architecture over monolithic by separating frontend from Rails API. Conducted team’s first containerized app deployment onto dev server using Docker and DCOS.
   date: Jun 2016 - Aug 2016
